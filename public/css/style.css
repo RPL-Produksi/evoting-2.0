@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#preloader {
+    background: #fff;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader img {
+    width: 15%;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.bg-login {
+    background-image: url("../assets/img/background_login.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card-zooming {
+    transition: all 0.3s;
+}
+.card-zooming:hover {
+    scale: 0.99;
+}
