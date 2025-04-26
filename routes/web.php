@@ -93,7 +93,7 @@ Route::group(['middleware' => ['auth', 'role:admin'], 'prefix' => 'admin'], func
     });
 });
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'user'], function () {
+Route::group(['middleware' => ['auth', 'role:user'], 'prefix' => 'user'], function () {
     Route::get('/dashboard', [DashboarController::class, 'dashboard'])->name('user.dashboard');
 
     Route::get('/pemilu/{slug}/kandidat/{id}/data', [KandidatController::class, 'dataById'])->name('user.kandidat.data');

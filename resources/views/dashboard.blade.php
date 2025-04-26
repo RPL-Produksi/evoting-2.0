@@ -44,6 +44,7 @@
                     data-target="#changelogItems" aria-expanded="false">
                     Changelog
                     <ul class="collapse" id="changelogItems" style="margin-left: 30px;">
+                        <li>Fix Role Permission</li>
                         <li>Perbaikan Loader</li>
                         <li>Perbaikan Fitur Submit Form</li>
                         <li>Perbaikan Login</li>
