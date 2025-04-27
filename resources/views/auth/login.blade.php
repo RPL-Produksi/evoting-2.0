@@ -67,7 +67,7 @@
                         </h2>
                         <p>Silakan login untuk mulai memilih</p>
                     </div>
-                    <form action="{{ route('post.login') }}" method="POST" class="w-100 form-with-loading">
+                    <form action="{{ route('post.login', $adminLoggedIn) }}" method="POST" class="w-100 form-with-loading">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username"
