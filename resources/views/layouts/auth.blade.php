@@ -20,7 +20,7 @@
     <title>{{ config('app.name') }} | @yield('title')</title>
 </head>
 
-<body class="min-vh-100 d-flex justify-content-center align-items-center bg-login">
+<body class="min-vh-100 d-flex justify-content-center align-items-center bg-primary">
     <div id="preloader">
         <img src="{{ asset('assets/img/e-vote-logo-1.png') }}" alt="Logo Preloader">
     </div>
