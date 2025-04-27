@@ -1,5 +1,5 @@
 @extends('layouts.export')
-@section('title', 'Export Data User`')
+@section('title', 'Export Data User')
 
 @section('table')
     <table>
