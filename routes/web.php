@@ -103,5 +103,72 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user'], function () {
 });
 
 Route::get('/copyright', function () {
-    return view('copyright');
+    $data['member'] = [
+        [
+            'name' => 'Azzello Fabian Cristoper',
+            'img' => 'assets/img/member/AZZELLO.JPG',
+            'instagram' => 'https://www.instagram.com/azzello_fabian',
+            'steam' => 'https://steamcommunity.com/profiles/76561199347872767',
+            'website' => 'https://ello17.github.io',
+            'github' => 'https://github.com/Ello17'
+        ],
+        [
+            'name' => 'Bintang Akbar Ramadhan',
+            'img' => 'assets/img/member/BINTANG.JPG',
+            'instagram' => 'https://www.instagram.com/notb.13',
+            'steam' => 'https://steamcommunity.com/id/biboofication',
+            'website' => 'https://arwebs.my.id',
+            'github' => 'https://github.com/akbarr13'
+        ],
+        [
+            'name' => 'Farhan Dika Alsani',
+            'img' => 'assets/img/member/farhan.jpg',
+            'instagram' => 'https://www.instagram.com/farahanaya_',
+            'steam' => 'https://steamcommunity.com/profiles/76561199821372680',
+            'website' => 'https://uiahan.github.io/kkanva-portofolio',
+            'github' => 'https://github.com/uiahan'
+        ],
+        [
+            'name' => 'Muhamad Hilal',
+            'img' => 'assets/img/member/hilal.jpg',
+            'instagram' => 'https://www.instagram.com/md.hilallsluvyaa',
+            'steam' => 'https://steamcommunity.com/profiles/nmzr',
+            'website' => 'https://naramizaru.github.io',
+            'github' => 'https://github.com/NaraMizaru'
+        ],
+        [
+            'name' => 'Muhammad Rifaa Siraajuddin Sugandi',
+            'img' => 'assets/img/member/rifaa.jpg',
+            'instagram' => 'https://www.instagram.com/rifaa_srjdn',
+            'steam' => 'https://steamcommunity.com/profiles/76561199241184002',
+            'website' => 'https://knowrise.github.io',
+            'github' => 'https://github.com/KnowRise'
+        ],
+        [
+            'name' => 'Nadhif Musyafa Alfarel',
+            'img' => 'assets/img/member/nadhif.jpg',
+            'instagram' => 'https://www.instagram.com/nadhifmusyafa23',
+            'steam' => 'https://steamcommunity.com/profiles/76561199227190848',
+            'website' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'github' => 'https://github.com/TreeAngel'
+        ],
+        [
+            'name' => 'Syifa Nurul Fadilah',
+            'img' => 'assets/img/member/SYIFA-NURUL.JPG',
+            'instagram' => 'https://www.instagram.com/fae.lurien',
+            'steam' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'website' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'github' => 'https://github.com/itsdreamy'
+        ],
+        [
+            'name' => 'Syifa Syauqi Fauzani',
+            'img' => 'assets/img/member/SYFA.JPG',
+            'instagram' => 'https://www.instagram.com/syi_syau',
+            'steam' => 'https://steamcommunity.com/profiles/76561199544464507/',
+            'website' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'github' => 'https://github.com/zxsyau'
+        ],
+    ];
+
+    return view('copyright')->with($data);
 })->name('copyright');
