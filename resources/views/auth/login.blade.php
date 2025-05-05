@@ -9,7 +9,7 @@
         }
 
         .right-box {
-            padding: 40px 30px 40px 40px;
+            padding: 40px 70px 40px 0px;
         }
 
         ::placeholder {
@@ -23,28 +23,68 @@
         .rounded-5 {
             border-radius: 30px;
         }
-
+        .box-logo{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .center{
+            margin-bottom: 1.5rem;
+        }
+        .info{
+            width: fit-content;
+            background:white;
+            padding: 10px;
+            color: #4e73df;
+            margin-top:10px;
+            border-radius:10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .container{
+            flex-wrap:wrap;
+        }
+        @media screen and (min-width: 768px) {
+                .box-logo > img{
+                    width: 64%;
+                    filter: drop-shadow( -5px 5px 5px #4e73df);
+                }
+            
+        }
         @media only screen and (max-width: 768px) {
             .box-area {
                 margin: 0 10px;
             }
 
             .left-box {
-                height: 100px;
-                overflow: hidden;
+                /* height: 100px; */
+                /* overflow: hidden; */
             }
-
+            .box-logo{
+                margin-top:24px
+            }
+            .box-logo > img{
+            width: 64%;
+            filter: drop-shadow();
+        }
             .right-box {
                 padding: 20px;
             }
+            .center{
+            margin-bottom: .5rem;
+            margin-top:1.2rem;
+            text-align:center;
+        }
         }
     </style>
 @endpush
 
 @section('content')
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container d-flex justify-content-center align-items-center">
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box bg-primary">
+            <div class="left-box box-logo col-md-6 flex-column">
+                <img src="{{ asset('assets/img/smkn-2.png') }}" alt="">
+            </div>
+            <!-- <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box bg-primary">
                 <div class="featured-image mb-3">
                     <img src="{{ asset('assets/img/smkn-2.png') }}" class="img-fluid d-none d-md-block" style="width: 250px;">
                 </div>
@@ -53,11 +93,11 @@
                 <small class="text-white text-wrap text-center"
                     style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Simple E-Voting For SMK Negeri 2
                     Sukabumi</small>
-            </div>
+            </div> -->
 
             <div class="col-md-6 right-box">
-                <div class="row align-items-center">
-                    <div class="header-text mb-4">
+                <div class="align-items-center">
+                    <div class="header-text center">
                         <h2>Login |
                             @if ($adminLoggedIn)
                                 Admin
@@ -100,6 +140,9 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="info">
+        <small class=" text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace; font-weight:500;">Simple E-Voting For SMK Negeri 2 Sukabumi</small>
         </div>
     </div>
 @endsection
